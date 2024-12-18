@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 18 déc. 2024 à 19:07
+-- Généré le : mer. 18 déc. 2024 à 19:56
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -70,16 +70,15 @@ CREATE TABLE IF NOT EXISTS `table_client` (
   `num_cni_pc` int(20) NOT NULL,
   `num_reg` int(30) NOT NULL,
   PRIMARY KEY (`id_c`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `table_client`
 --
 
 INSERT INTO `table_client` (`id_c`, `nom_c`, `prenom_c`, `nom_b`, `email_c`, `tel_c`, `id_pays`, `add_c`, `willaya_c`, `ville_c`, `code_postal_c`, `pass_c`, `dateins_c`, `post`, `num_cni_pc`, `num_reg`) VALUES
-(12, 'BENYOUB', 'Adel', '', 'adelbenyoub@gmail.com', '0562011462', 3, '10 Avenue 1er novembre 1954', 'Béjaïa', 'Sidi-Aïch', '06005', '4a7d1ed414474e4033ac29ccb8653d9b', '2024-12-17 01:41:02', 'client', 0, 0),
-(13, 'BENYOUB', 'Fayçal', '', 'fayfaycal@gmail.com', '', 72, '', '', '', '', '4a7d1ed414474e4033ac29ccb8653d9b', '2024-12-17 03:00:50', 'client', 0, 0),
-(14, 'BENYOUB', 'Fayçal', '', 'fay@gmail.com', '', 72, '', '', '', '', '4a7d1ed414474e4033ac29ccb8653d9b', '2024-12-17 03:01:46', 'client', 0, 0);
+(17, 'Client', 'Client', '', 'client@gmail.com', '', 3, '', '', '', '', '62608e08adc29a8d6dbc9754e659f125', '2024-12-18 07:25:18', 'client', 0, 0),
+(18, '', '', 'Boutique', 'boutique@gmail.com', '', 3, '', '', '', '', '886a9f9edb12bdd4ac1d58f0283b6855', '2024-12-18 07:27:18', 'boutique', 123456789, 123456789);
 
 -- --------------------------------------------------------
 
@@ -496,14 +495,14 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `tel_u` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`id`, `nom_u`, `email`, `tel_u`, `password`) VALUES
-(1, 'admin', 'admin@gmail.com', '000000000', '21232f297a57a5a743894a0e4a801fc3');
+(6, 'Admin', 'admin@gmail.com', '0123456789', '21232f297a57a5a743894a0e4a801fc3');
 
 -- --------------------------------------------------------
 
