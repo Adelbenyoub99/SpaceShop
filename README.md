@@ -12,9 +12,9 @@ Importer le fichier pfc_bdd.sql dans phpmyadmin
 
 ## Utilisation de l'application : 
 
-admin :       email : admin@gmail.com / Mot de passe : admin
-boutique :    email : boutique@gmail.com / Mot de passe : boutique
-client :      email : client@gmail.com / Mot de passe : client
+admin :       email : admin@gmail.com / Mot de passe : admin.
+boutique :    email : boutique@gmail.com / Mot de passe : boutique.
+client :      email : client@gmail.com / Mot de passe : client.
 
 ## Contributeurs : 
 
