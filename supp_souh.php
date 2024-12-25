@@ -1,6 +1,5 @@
 <?php require_once('header.php'); ?>
 
-
 <?php
 if (!isset($_REQUEST['idp'])) {
     header('location: deconnecter.php');
@@ -17,13 +16,10 @@ if (!isset($_REQUEST['idp'])) {
     }
 }
 ?>
-
 <?php
-
 
 // Delete from table_panier
 $stmt = $pdo->prepare("DELETE FROM table_souhaite WHERE id=?");
 $stmt->execute(array($_REQUEST['idp']));
-
 header('location: panier.php');
 ?>

@@ -9,7 +9,6 @@
                         <li><a href=""><i class="fa fa-twitter"></i></a></li>
                         <li><a href=""><i class="fa fa-linkedin"></i></a></li>
                         <li><a href=""><i class="fa fa-instagram"></i></a></li>
-                        <!-- <li><a href=""><i class="fa fa-whatsapp"></i></a></li> -->
                         <li><a href=""><i class="fa fa-telegram"></i></a></li>
                     </ul>
                 </div>
@@ -20,12 +19,9 @@
         </div>
     </div>
 </div>
-
 <a href="#" class="scrollup">
     <i class="fa fa-angle-up"></i>
 </a>
-
-
 <script src="assets/js/jquery-2.2.4.min.js"></script>
 <script src="assets/js/summernote.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>

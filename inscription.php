@@ -1,6 +1,4 @@
 <?php require_once('header.php'); ?>
-
-
 <?php
 include_once "fonctions/rec_pays.php";
 $result = affiche_pays();
@@ -10,7 +8,6 @@ if (isset($_POST['inscription'])) {
     $message = inscription();
 }
 ?>
-
 <div class="page-banner">
     <div class="inner">
         <h1>Inscription</h1>
@@ -47,7 +44,7 @@ if (isset($_POST['inscription'])) {
                                 <div class="form-group">
                                     <label for="">Pays :</label>
                                     <select name="pays" class="form-control select2">
-                                        <option value="">séléctionnez</option>
+                                        <option value="">Séléctionnez</option>
                                         <!-- afficher les pays -->
                                         <?php
                                         foreach ($result as $row) {
@@ -67,7 +64,7 @@ if (isset($_POST['inscription'])) {
                                     <input type="password" class="form-control" name="cmotpasse">
                                 </div>
                                 <div class="form-group">
-                                    <p style="padding-left: 17px;"> Si vous avez de compte <a href="connexion.php"> Cliquez ici </a></p>
+                                    <p style="padding-left: 17px;"> Si vous n'avez de compte <a href="connexion.php"> Cliquez ici </a></p>
                                 </div>
                                 <div class="form-group" style="float: right;">
                                     <label for=""></label>

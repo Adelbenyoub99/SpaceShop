@@ -63,10 +63,4 @@ include_once "../fonctions/utilisateur.php";
 	</div>
 </section>
 
-
-
-
-
-
-
 <?php require_once('footer.php'); ?>

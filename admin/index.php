@@ -15,7 +15,7 @@ include_once "../fonctions/statistique.php"
       <div class="small-box bg-maroon">
         <div class="inner">
           <h3><?php echo nombredemande(); ?></h3>
-          <p>Les commandes</p>
+          <p>Commandes</p>
         </div>
         <div class="icon">
           <i class="ionicons ion-clipboard"></i>
@@ -27,7 +27,7 @@ include_once "../fonctions/statistique.php"
       <div class="small-box bg-green">
         <div class="inner">
           <h3><?php echo nombrevent(); ?></h3>
-          <p>Les ventes</p>
+          <p>Ventes</p>
         </div>
         <div class="icon">
           <i class="ionicons ion-android-checkbox-outline"></i>
@@ -39,7 +39,7 @@ include_once "../fonctions/statistique.php"
       <div class="small-box bg-red">
         <div class="inner">
           <h3><?php echo chiffre().' DA'; ?></h3>
-          <p>...</p>
+          <p>Chiffre d'affaire</p>
         </div>
         <div class="icon">
           <i class="ionicons ion-android-cart"></i>
@@ -63,7 +63,7 @@ include_once "../fonctions/statistique.php"
       <div class="small-box bg-red">
         <div class="inner">
          <h3><?php echo nombreclient(); ?></h3>
-         <p>Utilisateur</p>
+         <p>Clients</p>
        </div>
        <div class="icon">
          <i class="ionicons ion-person-stalker"></i>
@@ -75,7 +75,7 @@ include_once "../fonctions/statistique.php"
     <div class="small-box bg-black">
       <div class="inner">
         <h3><?php echo nombreboutique(); ?></h3>
-        <p>Boutique</p>
+        <p>Boutiques</p>
       </div>
       <div class="icon">
         <i class="ionicons ion-person-stalker"></i>
@@ -87,7 +87,7 @@ include_once "../fonctions/statistique.php"
     <div class="small-box bg-olive">
       <div class="inner">
        <h3><?php echo nombrecategorie(); ?></h3>
-       <p>Catégorie</p>
+       <p>Catégories</p>
      </div>
      <div class="icon">
        <i class="ionicons ion-arrow-up-b"></i>
@@ -99,7 +99,7 @@ include_once "../fonctions/statistique.php"
   <div class="small-box bg-maroon">
     <div class="inner">
      <h3><?php echo nombresouscategorie(); ?></h3>
-     <p>Sous-catégorie</p>
+     <p>Sous-catégories</p>
    </div>
    <div class="icon">
      <i class="ionicons ion-arrow-down-b"></i>

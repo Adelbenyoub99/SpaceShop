@@ -31,7 +31,7 @@
 								<th width="180">Adresse</th>
 								<th width="180">Date d'inscription</th>
 								<th width="100">CNI</th>
-								<th width="100">Numéro de regestre</th>
+								<th width="100">Numéro de registre</th>
 							</tr>
 						</thead>
 						<tbody>

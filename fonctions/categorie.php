@@ -59,7 +59,7 @@ function ajouter_categorie()
         $total = $stmt->rowCount();
         if ($total) {
             $valid = 0;
-            $message = '<div class="callout callout-danger"><p>La catégorie existe déjà</p></div>';
+            $message = '<div class="callout callout-danger"><p>Cette catégorie existe déjà</p></div>';
             return $message;
         }
     }
@@ -67,7 +67,7 @@ function ajouter_categorie()
     if ($valid == 1) {
         $stmt = $pdo->prepare("INSERT INTO table_cat (cat_nom,aff_ach) VALUES (?,?)");
         $stmt->execute(array($_POST['nom_cat'], $_POST['cacher']));
-        $message = '<div class="callout callout-success"><p>Catégorie ajouter avec succès</p></div>';
+        $message = '<div class="callout callout-success"><p>Catégorie ajoutée avec succès</p></div>';
         return $message;
     }
 }
@@ -79,7 +79,7 @@ function modifier_categorie()
     $valid = 1;
     if (empty($_POST['nom_cat'])) {
         $valid = 0;
-        $message = '<div class="callout callout-danger"><p>Ajouter une catégorie</p></div>';
+        $message = '<div class="callout callout-danger"><p>Ajoutez une catégorie</p></div>';
         return $message;
     } else {
         // si existe déjà
@@ -175,20 +175,20 @@ function ajouter_souscat()
     //si il na pas selectionnee une categorie
     if (empty($_POST['id_categ'])) {
         $valid = 0;
-        $message = '<div class="callout callout-danger"><p>selectionnee une categorie</p></div>';
+        $message = '<div class="callout callout-danger"><p>Sélectionnez une catégorie</p></div>';
         return $message;
     }
     //si le champ de la sous categorie est vide
     if (empty($_POST['sous_cat'])) {
         $valid = 0;
-        $message = '<div class="callout callout-danger"><p>ajouter une sous categorie</p></div>';
+        $message = '<div class="callout callout-danger"><p>Ajoutez une sous-catégorie</p></div>';
         return $message;
     }
     //sinon il ajoute a la base de donnees
     if ($valid == 1) {
         $stmt = $pdo->prepare("INSERT INTO table_souscat (nom_souscat,id_cat) VALUES (?,?)");
         $stmt->execute(array($_POST['sous_cat'], $_POST['id_categ']));
-        $message = '<div class="callout callout-success"><p>sous categorie ajouter avec succes</p></div>';
+        $message = '<div class="callout callout-success"><p>Sous-catégorie ajoutée avec succès</p></div>';
         return $message;
     }
 }
@@ -201,20 +201,20 @@ function modifie_souscat()
     // si il n a pas selectionnee la categorie
     if (empty($_POST['id_categ'])) {
         $valid = 0;
-        $message = '<div class="callout callout-danger"><p>selectionnee une categorie</p></div>';
+        $message = '<div class="callout callout-danger"><p>Sélectionnez une catégorie</p></div>';
         return $message;
     }
     //si le champe de sous categorie est vide 
     if (empty($_POST['sous_cat'])) {
         $valid = 0;
-        $message = '<div class="callout callout-danger"><p>ajouter une sous categorie</p></div>';
+        $message = '<div class="callout callout-danger"><p>Ajoutez une sous-catégorie</p></div>';
         return $message;
     }
     //sinon update la base de donnees
     if ($valid == 1) {
         $stmt = $pdo->prepare("UPDATE table_souscat SET nom_souscat=?,id_cat=? WHERE id_souscat=?");
         $stmt->execute(array($_POST['sous_cat'], $_POST['id_categ'], $_REQUEST['id']));
-        $message = '<div class="callout callout-success"><p>sous categorie modifie avec succes</p></div>';
+        $message = '<div class="callout callout-success"><p>Sous-catégorie modifiée avec succès</p></div>';
         return $message;
     }
 }

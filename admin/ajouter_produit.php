@@ -43,7 +43,7 @@ include_once "../fonctions/produit.php";
 							<label for="" class="col-sm-3 control-label"> Catégorie </label>
 							<div class="col-sm-4">
 								<select name="id_cat" class="form-control select2 cat">
-									<option value="">Séléctionnez une categorie</option>
+									<option value="">Séléctionnez une catégorie</option>
 
 									<?php
 									foreach ($result as $row) {
@@ -57,10 +57,10 @@ include_once "../fonctions/produit.php";
 						</div>
 
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Sous catégorie </label>
+							<label for="" class="col-sm-3 control-label">Sous-catégorie </label>
 							<div class="col-sm-4">
 								<select name="idsous_cat" class="form-control select2 sous-cat">
-									<option value="">Séléctionnez une sous catégorie</option>
+									<option value="">Séléctionnez une sous-catégorie</option>
 								</select>
 							</div>
 						</div>
@@ -102,7 +102,7 @@ include_once "../fonctions/produit.php";
 
                         <!--dans youtube -->
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Autre photos</label>
+							<label for="" class="col-sm-3 control-label">Autres photos</label>
 							<div class="col-sm-4" style="padding-top:4px;">
 								<table id="ProductTable" style="width:100%;">
 			                        <tbody>
@@ -132,14 +132,14 @@ include_once "../fonctions/produit.php";
 						</div>
 
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Déscription</label>
+							<label for="" class="col-sm-3 control-label">Description</label>
 							<div class="col-sm-8">
 								<textarea name="pro_descr" class="form-control" cols="30" rows="10" id="editor2"></textarea>
 							</div>
 						</div>
 				
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">actifs</label>
+							<label for="" class="col-sm-3 control-label">Actifs</label>
 							<div class="col-sm-8">
 								<select name="acti_pro" class="form-control" style="width:auto;">
 									<option value="1">Oui</option>

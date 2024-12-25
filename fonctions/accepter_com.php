@@ -60,10 +60,10 @@ if ($qua <= $qexiste) {
     $statement->execute(array($nev_quan, $row1['id_produit']));
     $stmt = $pdo->prepare("DELETE FROM tbl_demmande WHERE id=?");
     $stmt->execute(array($_REQUEST['idc']));
-    $message = '<div class="callout callout-success"><p>la commande est accepter</p></div>';
+    $message = '<div class="callout callout-success"><p>La commande est acceptée</p></div>';
     header('location: ../admin/commande.php');
 } else {
-    $message = '<div class="callout callout-danger"><p>la quantite est superieur</p></div>';
+    $message = '<div class="callout callout-danger"><p>La quantité est superieur</p></div>';
     header('location: ../admin/commande.php');
 }
 

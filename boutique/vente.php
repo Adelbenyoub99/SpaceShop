@@ -1,8 +1,6 @@
 <?php require_once('header.php'); ?>
 <?php require_once('headerboutique.php'); ?>
 
-
-
 <?php
 
 $error_message = "";
@@ -16,37 +14,27 @@ if ($success_message != '') {
 }
 ?>
 
-
-
 <section class="content-header">
     <div class="content-header-left">
-        <h1>les vente</h1>
+        <h1>Les ventes</h1>
     </div>
 </section>
-
-
 <section class="content">
-
     <div class="row">
         <div class="col-md-12">
-
-
             <div class="box box-info">
-
                 <div class="box-body table-responsive">
                     <table id="example1" class="table table-bordered table-hover table-striped">
                         <thead>
-
                             <tr>
                                 <th>#</th>
-                                <th>client</th>
-                                <th>produit</th>
-                                <th>quantite</th>
-                                <th>total</th>
-                                <th>date</th>
+                                <th>Client</th>
+                                <th>Produit</th>
+                                <th>Quantité</th>
+                                <th>Total</th>
+                                <th>Date</th>
                                 <th>Action</th>
                             </tr>
-
                         </thead>
                         <tbody>
 
@@ -55,18 +43,12 @@ if ($success_message != '') {
                             $statement = $pdo->prepare("SELECT * FROM tbl_vente WHERE idboutique = ? ORDER by id DESC");
                             $statement->execute(array($_SESSION['botique']['id_c']));
                             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
                             foreach ($result as $row) {
                                 $i++;
                             ?>
-
-
                                 <tr>
                                     <td><?php echo $i; ?></td>
-
-
                                     <td>
-
                                         <?php
                                         $statement1 = $pdo->prepare("SELECT * FROM table_client WHERE id_c=?");
                                         $statement1->execute(array($row['id_client']));
@@ -78,10 +60,7 @@ if ($success_message != '') {
                                         }
                                         ?>
 
-
-
                                     </td>
-
                                     <td>
 
                                         <?php
@@ -96,37 +75,25 @@ if ($success_message != '') {
                                         ?>
 
                                     </td>
-
-
                                     <td><?php echo $row['quantite']; ?></td>
-
                                     <td><?php echo $row1['p_prix'] * $row['quantite'] . ' DA'; ?></td>
-
                                     <td><?php echo $row['date_vente']; ?></td>
-
-
                                     <td>
-
-                                        <a href="#" class="btn btn-danger btn-xs" data-href="supp_vente.php?idc=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete" style="width:100%;">supprimer</a>
-
+                                        <a href="#" class="btn btn-danger btn-xs" data-href="supp_vente.php?idc=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete" style="width:100%;">Supprimer</a>
                                     </td>
-
                                 </tr>
-
 
                             <?php
                             }
                             ?>
 
-
                         </tbody>
                     </table>
                 </div>
             </div>
-
-
+        </div>
+    </div>
 </section>
-
 
 <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -136,16 +103,13 @@ if ($success_message != '') {
                 <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
             </div>
             <div class="modal-body">
-                vous etes sur de supprimer?
+                Vous êtes sur de vouloir supprimer ?
             </div>
             <div class="modal-footer">
-
-                <a class="btn btn-danger btn-ok">oui</a>
+                <a class="btn btn-danger btn-ok">Oui</a>
             </div>
         </div>
     </div>
 </div>
-
-
 
 <?php require_once('footer.php'); ?>

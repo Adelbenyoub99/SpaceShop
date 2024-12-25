@@ -9,10 +9,10 @@ $result = affiche_produitboutique();
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>les produits</h1>
+		<h1>Les produits</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="ajouter_produit.php" class="btn btn-primary btn-sm" style="background-color: black; border-color: black; float: right; margin-bottom: 10px;">ajouter</a>
+		<a href="ajouter_produit.php" class="btn btn-primary btn-sm" style="background-color: black; border-color: black; float: right; margin-bottom: 10px;">Ajouter</a>
 	</div>
 </section>
 
@@ -26,13 +26,13 @@ $result = affiche_produitboutique();
 							<tr>
 								<th width="10">#</th>
 								<th>Photo</th>
-								<th width="100">nom produit</th>
-								<th width="60">ancien prix</th>
-								<th width="60">prix</th>
-								<th width="60">quantite</th>
-								<th>nombre vue</th>
-								<th>Active?</th>
-								<th width="120">plus</th>
+								<th width="100">Nom du produit</th>
+								<th width="60">Ancien prix</th>
+								<th width="60">Prix</th>
+								<th width="60">Quantité</th>
+								<th>Nombre de vue</th>
+								<th>Actif ?</th>
+								<th width="120">Plus</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -56,9 +56,9 @@ $result = affiche_produitboutique();
 										} ?>
 									</td>
 									<td>
-										<a href="modifie_produit.php?idp=<?php echo $row['p_id']; ?>" class="btn btn-primary btn-xs">modifie</a>
+										<a href="modifie_produit.php?idp=<?php echo $row['p_id']; ?>" class="btn btn-primary btn-xs">Modifier</a>
 
-										<a href="#" class="btn btn-danger btn-xs" data-href="../fonctions/supp_produitboutique.php?id=<?php echo $row['p_id']; ?>" data-toggle="modal" data-target="#confirm-delete">supprimer</a>
+										<a href="#" class="btn btn-danger btn-xs" data-href="../fonctions/supp_produitboutique.php?id=<?php echo $row['p_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Supprimer</a>
 									</td>
 								</tr>
 							<?php
@@ -81,12 +81,12 @@ $result = affiche_produitboutique();
 				<h4 class="modal-title" id="myModalLabel">Confirmation</h4>
 			</div>
 			<div class="modal-body">
-				<p>vous etes sur de supprimer?</p>
-				<p style="color:red;">attention, tout les demmand seront supprimer</p>
+				<p>Vous êtes sûr de vouloir supprimer ?</p>
+				<p style="color:red;">Attention, toutes les commandes seront supprimer</p>
 			</div>
 
 			<div class="modal-footer">
-				<a class="btn btn-danger btn-ok">oui</a>
+				<a class="btn btn-danger btn-ok">Oui</a>
 			</div>
 
 		</div>

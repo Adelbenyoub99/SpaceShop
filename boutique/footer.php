@@ -7,11 +7,9 @@
 		<script src="../assets/js/jquery.dataTables.min.js"></script>
 		<script src="../assets/js/dataTables.bootstrap.min.js"></script>
 		<script src="../assets/js/select2.full.min.js"></script>
-
 		<script src="../assets/js/bootstrap-datepicker.js"></script>
-
-
 		<script src="../assets/js/summernote.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
 
 		<script>
 			$(document).ready(function() {
@@ -103,6 +101,12 @@
 
 
 
+
+
+
+<!-- 
+
+
 		<script type="text/javascript">
 			$(document).ready(function() {
 
@@ -134,8 +138,6 @@
 
 			});
 
-
-
 			var items = [];
 			for (i = 1; i <= 24; i++) {
 				items[i] = document.getElementById("tabField" + i);
@@ -145,27 +147,22 @@
 			items[2].style.display = 'block';
 			items[3].style.display = 'block';
 			items[4].style.display = 'none';
-
 			items[5].style.display = 'block';
 			items[6].style.display = 'block';
 			items[7].style.display = 'block';
 			items[8].style.display = 'none';
-
 			items[9].style.display = 'block';
 			items[10].style.display = 'block';
 			items[11].style.display = 'block';
 			items[12].style.display = 'none';
-
 			items[13].style.display = 'block';
 			items[14].style.display = 'block';
 			items[15].style.display = 'block';
 			items[16].style.display = 'none';
-
 			items[17].style.display = 'block';
 			items[18].style.display = 'block';
 			items[19].style.display = 'block';
 			items[20].style.display = 'none';
-
 			items[21].style.display = 'block';
 			items[22].style.display = 'block';
 			items[23].style.display = 'block';
@@ -267,6 +264,7 @@
 				}
 			};
 		</script>
+		Ceci est un commentaire -->
 
 		</body>
 

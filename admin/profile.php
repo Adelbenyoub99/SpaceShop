@@ -27,9 +27,6 @@ if(isset($_POST['motpasse'] )) {
 }
 ?>
 
-
-
-
 <section class="content-header">
 	<div class="content-header-left">
 		<h1>Profil</h1>
@@ -45,28 +42,28 @@ if(isset($_POST['motpasse'] )) {
 
 			<div class="nav-tabs-custom">
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#tab_1" data-toggle="tab">Modifie les informations</a></li>
-					<li><a href="#tab_3" data-toggle="tab">Modifie le mot de passe</a></li>
+					<li class="active"><a href="#tab_1" data-toggle="tab">Modifier les informations</a></li>
+					<li><a href="#tab_3" data-toggle="tab">Modifier le mot de passe</a></li>
 				</ul>
 				<div class="tab-content">
-					<div class="tab-pane active" id="tab_1">						
+					<div class="tab-pane active" id="tab_1">
 						<form class="form-horizontal" action="" method="post">
 							<div class="box box-info">
 								<div class="box-body">
 									<div class="form-group">
-										<label for="" class="col-sm-2 control-label">Nom :</label>
+										<label for="" class="col-sm-2 control-label">Nom</label>
 										<div class="col-sm-4">
 											<input type="text" class="form-control" name="nom" value="<?php echo $nom; ?>">
 										</div>
 									</div>
 									<div class="form-group">
-										<label for="" class="col-sm-2 control-label">Email :</label>						
+										<label for="" class="col-sm-2 control-label">Email</label>
 										<div class="col-sm-4">
 											<input type="email" class="form-control" name="email" value="<?php echo $email; ?>">
 										</div>
 									</div>
 									<div class="form-group">
-										<label for="" class="col-sm-2 control-label">Téléphone :</label>
+										<label for="" class="col-sm-2 control-label">Téléphone</label>
 										<div class="col-sm-4">
 											<input type="text" class="form-control" name="tel" value="<?php echo $tel; ?>">
 										</div>
@@ -108,8 +105,7 @@ if(isset($_POST['motpasse'] )) {
 						</form>
 					</div>
 				</div>
-			</div>			
-
+			</div>
 		</div>
 	</div>
 </section>

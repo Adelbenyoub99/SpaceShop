@@ -91,11 +91,6 @@ function nombrevent()
 	return $vent;
 }
 
-
-
-
-
-
 // **************************************Statistiques boutique**********************************
 // Fonction pour calculer le nombre de produits
 function nombreproduitboutique()

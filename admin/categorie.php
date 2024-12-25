@@ -74,10 +74,10 @@ $rs=affiche_categorie();
             </div>
             <div class="modal-body">
                 <p>Vous êtes sur de vouloir supprimer cette catégorie ?</p>
-                <p style="color:red;">Attention toute sous catégorie et produit de cette catégorie va être supprimer</p>
+                <p style="color:red;">Attention toute les sous-catégories et les produits de cette catégorie vont être supprimer</p>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-danger btn-ok">oui</a>
+                <a class="btn btn-danger btn-ok">Oui</a>
             </div>
         </div>
     </div>

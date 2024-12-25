@@ -1,6 +1,4 @@
 <?php require_once('header.php'); ?>
-
-
 <?php
 if (!isset($_REQUEST['id'])) {
     header('location: index.php');
@@ -9,7 +7,6 @@ if (!isset($_REQUEST['id'])) {
     include_once "fonctions/produit.php";
     $result = affiche_leproduit();
 }
-
 foreach ($result as $row) {
     $nomp = $row['p_nom'];
     $ans_prix = $row['p_prixanc'];
@@ -21,104 +18,48 @@ foreach ($result as $row) {
     $disc = $row['p_desc'];
     $vue = $row['p_vue'];
 }
-
-
-
 $vue = $vue + 1;
-
 $statement = $pdo->prepare("UPDATE table_produit SET p_vue=? WHERE p_id=?");
 $statement->execute(array($vue, $_REQUEST['id']));
-
-
-
-
-
-
-
-
 $message = "";
 if (isset($_POST['ajouterau_panier'])) {
-
-
     if (isset($_SESSION['client'])) {
-
-
-
-
-
         if (empty($_SESSION['client'])) {
-
-            $message = "<div class='error' style='padding: 10px;background:#f1f1f1;margin-bottom:20px; border-radius: 5px;'>connectez vous dabord svp <br></div>";
+            $message = "<div class='error' style='padding: 10px;background:#f1f1f1;margin-bottom:20px; border-radius: 5px;'>Vous devez vous connecter<br></div>";
         } else {
-
-
             if ($_POST['qua'] > $p_qty) {
-
-                $message = "<div class='error' style='padding: 10px;background:#f1f1f1;margin-bottom:20px; border-radius: 5px;'>desole nous avons pas la quantité que vous demandez <br></div>";
+                $message = "<div class='error' style='padding: 10px;background:#f1f1f1;margin-bottom:20px; border-radius: 5px;'>Quantité indisponible<br></div>";
             } else {
                 $stmt = $pdo->prepare("INSERT INTO table_panier (idper,idboutique,idproduit,quant) VALUES (?,?,?,?)");
                 $stmt->execute(array($_SESSION['client']['id_c'], $idboutique, $_REQUEST['id'], $_POST['qua']));
-
-                $message = "<div class='succes' style='padding: 10px;background:#f1f1f1;margin-bottom:20px; border-radius: 5px;'>ajouter au <a href'panier.php'> panier </a> avec succès <br></div>";
+                $message = "<div class='succes' style='padding: 10px;background:#f1f1f1;margin-bottom:20px; border-radius: 5px;'>Produit ajouter au <a href='panier.php'> Panier </a> avec succès <br></div>";
             }
         }
     } else {
-        $message = "<div class='error' style='padding: 10px;background:#f1f1f1;margin-bottom:20px; border-radius: 5px;'>vous devait avoir un compte client <br></div>";
+        $message = "<div class='error' style='padding: 10px;background:#f1f1f1;margin-bottom:20px; border-radius: 5px;'>Vous devez avoir un compte client <br></div>";
     }
 }
 
-
-
-
-
-
-
 if (isset($_POST['ajouterau_souh'])) {
-
-
-
-
-
-
-
     if (isset($_SESSION['client'])) {
 
         $stmt = $pdo->prepare("INSERT INTO table_souhaite (idper,idproduit) VALUES (?,?)");
         $stmt->execute(array($_SESSION['client']['id_c'], $_REQUEST['id']));
-        $message = "<div class='succes' style='padding: 10px;background:#f1f1f1;margin-bottom:20px; border-radius: 5px;'>ajouter a la liste des souhite avec succès <br></div>";
+        $message = "<div class='succes' style='padding: 10px;background:#f1f1f1;margin-bottom:20px; border-radius: 5px;'>Produit ajouter à la <a href='panier.php'> liste des souhaits </a> avec succès <br></div>";
     } else {
-
-
-        $message = "<div class='error' style='padding: 10px;background:#f1f1f1;margin-bottom:20px; border-radius: 5px;'>vous devait avoir un compte client <br></div>";
+        $message = "<div class='error' style='padding: 10px;background:#f1f1f1;margin-bottom:20px; border-radius: 5px;'>Vous devez avoir un compte client <br></div>";
     }
 }
-
-
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="page">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-
                 <?php echo $message; ?>
-
                 <div class="product">
                     <div class="row">
                         <!--photos-->
                         <div class="col-md-5">
-
                             <ul class="prod-slider">
                                 <li style="background-image: url(assets/uploads/<?php echo $photos; ?>);">
                                     <a class="popup" href="assets/uploads/<?php echo $photos; ?>"></a>
@@ -155,16 +96,12 @@ if (isset($_POST['ajouterau_souh'])) {
                                 }
                                 ?>
                             </div>
-
-
-
                         </div>
                         <div class="col-md-7">
                             <div class="p-title">
                                 <h2><?php echo $nomp; ?></h2>
                             </div>
                             <?php
-
                             $statement = $pdo->prepare("SELECT * FROM table_client WHERE id_c=?");
                             $statement->execute(array($idboutique));
                             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -175,11 +112,9 @@ if (isset($_POST['ajouterau_souh'])) {
                             <?php
                             }
                             ?>
-
-                            <form action="" method="post">
-
+                            <form method="post">
                                 <div class="p-price">
-                                    <span style="font-size:14px;">prix</span><br>
+                                    <span style="font-size:14px;">Prix</span><br>
                                     <span>
                                         <?php if ($ans_prix != ''): ?>
                                             <del style=" color: red;"><?php echo $ans_prix; ?> DA</del> <br>
@@ -187,82 +122,45 @@ if (isset($_POST['ajouterau_souh'])) {
                                         <?php echo $prix; ?> DA
                                     </span>
                                 </div>
-
-
-
                                 <div class="p-quantity">
                                     Quantité <br>
                                     <input type="number" class="input-text qty" step="1" min="1" max="" name="qua" value="1" title="Qty" size="4" inputmode="numeric">
                                 </div>
-
-
                                 <div class="btn-cart btn-cart1">
-
-                                    <input type="submit" value="ajouter au panier" name="ajouterau_panier">
-                                    <input type="submit" value="ajouter listes souhite" name="ajouterau_souh">
-
+                                    <input type="submit" value="Ajouter au panier" name="ajouterau_panier">
+                                    <input type="submit" value="Ajouter a la liste des souhaits" name="ajouterau_souh">
                                 </div>
-
-
                             </form>
-
-
                         </div>
                     </div>
-
-
-
                     <div class="row">
                         <div class="col-md-12">
-
                             <ul class="nav nav-tabs" role="tablist">
-
                                 <li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Informations</a></li>
-
                                 <li role="presentation"><a href="#disc" aria-controls="disc" role="tab" data-toggle="tab">Déscription</a></li>
-
-
                             </ul>
-
-
-
                             <div class="tab-content">
-
                                 <div role="tabpanel" class="tab-pane active" id="info" style="margin-top: -30px;">
                                     <p>
                                         <?php
-
                                         echo $pinfo;
-
                                         ?>
                                     </p>
                                 </div>
-
                                 <div role="tabpanel" class="tab-pane" id="disc" style="margin-top: -30px;">
                                     <p>
                                         <?php
-
                                         echo $disc;
-
                                         ?>
                                     </p>
                                 </div>
-
-
-
-
-
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
 </div>
-
-
 
 <?php require_once('footer.php'); ?>

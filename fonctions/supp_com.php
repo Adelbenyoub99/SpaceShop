@@ -18,7 +18,6 @@ if (!isset($_REQUEST['idc'])) {
 
 <?php
 
-
 $stmt = $pdo->prepare("DELETE FROM tbl_demmande WHERE id=?");
 $stmt->execute(array($_REQUEST['idc']));
 header('location: ../admin/commande.php');

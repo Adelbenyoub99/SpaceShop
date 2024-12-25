@@ -1,6 +1,5 @@
 <?php require_once('header.php'); ?>
 
-
 <?php
 if (!isset($_REQUEST['idc'])) {
 	header('location: deconnecter.php');
@@ -18,7 +17,6 @@ if (!isset($_REQUEST['idc'])) {
 ?>
 
 <?php
-
 
 $stmt = $pdo->prepare("DELETE FROM tbl_demmande WHERE id=?");
 $stmt->execute(array($_REQUEST['idc']));

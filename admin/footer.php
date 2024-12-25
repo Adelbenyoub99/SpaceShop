@@ -1,6 +1,3 @@
-</div>
-	</div>
-
 	<script src="js/jquery-2.2.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.dataTables.min.js"></script>
@@ -9,8 +6,6 @@
 	<script src="js/bootstrap-datepicker.js"></script>
 	<script src="js/app.min.js"></script>
 	<script src="js/summernote.js"></script>
-
-
 	<script>
 		// la taille des editeur de text
 		$(document).ready(function() {
@@ -21,7 +16,6 @@
 	        	height: 200
 	        });
 	    });
-
 
 		// permet de recuprer_sous_cat dune categorer 
 		//en envoyons une requete pour le fichie recuprer_sous_categ.php
@@ -42,9 +36,6 @@
 		});
 		
 	</script>
-
-
-
 	<script>
 	  $(function () {
 
@@ -71,8 +62,6 @@
 	  });
 	</script>
 
-
-
 	<!-- scripte et jquery pour les photos secondaire trouver sur google -->
 	<script type="text/javascript">
 
@@ -82,10 +71,9 @@
 
 		        var rowNumber = $("#ProductTable tbody tr").length;
 
-		        var trNew = "";              
+		        var trNew = "";
 
 		        var addLink = "<div class=\"upload-btn" + rowNumber + "\"><input type=\"file\" name=\"photo[]\"  style=\"margin-bottom:5px;\"></div>";
-		           
 		        var deleteRow = "<a href=\"javascript:void()\" class=\"Delete btn btn-danger btn-xs\">X</a>";
 
 		        trNew = trNew + "<tr> ";
@@ -238,10 +226,6 @@
 		       	items[24].style.display = 'block';
 			}
 		};
-
-
-
-        
     </script>
 
 </body>

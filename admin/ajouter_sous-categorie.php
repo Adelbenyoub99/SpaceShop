@@ -15,7 +15,7 @@ if(isset($_POST['ajouter'])) {
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Ajouter une sous catégorie</h1>
+		<h1>Ajouter une sous-catégorie</h1>
 	</div>
 	<div class="content-header-right">
 		<a href="sous-categorie.php" class="btn btn-primary btn-sm">Afficher tout</a>
@@ -51,7 +51,7 @@ if(isset($_POST['ajouter'])) {
 						</div>
 
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Sous catégorie </label>
+							<label for="" class="col-sm-3 control-label">Sous-catégorie </label>
 							<div class="col-sm-4">
 								<input type="text" class="form-control" name="sous_cat">
 							</div>

@@ -619,7 +619,7 @@ function notificationboutique()
 function connexionadmin()
 {
     if (empty($_POST['email']) || empty($_POST['motpasse'])) {
-        $error_message = 'ajouter votre email ou mot de passe<br>';
+        $error_message = 'Ajoutez votre email ou mot de passe<br>';
         return $error_message;
     } else {
         $pdo = pdo();
@@ -655,7 +655,6 @@ function connexionadmin()
 function infoadmin()
 {
     $pdo = pdo();
-
     $statement = $pdo->prepare("SELECT * FROM tbl_user WHERE id=?");
     $statement->execute(array($_SESSION['user']['id']));
     $statement->rowCount();
@@ -671,19 +670,19 @@ function modifieprofadmin()
     //verfie le nom si nest pas vide
     if (empty($_POST['nom'])) {
         $valid = 0;
-        $message = '<div class="callout callout-danger"><p>ajouter un nom svp</p></div>';
+        $message = '<div class="callout callout-danger"><p>Nom</p></div>';
         return $message;
     }
     // verfie email si nest pas vide
     if (empty($_POST['email'])) {
         $valid = 0;
-        $message = '<div class="callout callout-danger"><p>ajouter email svp</p></div>';
+        $message = '<div class="callout callout-danger"><p>Email</p></div>';
         return $message;
     } else {
         //verfie la syntaxe de email
         if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false) {
             $valid = 0;
-            $message = '<div class="callout callout-danger"><p>erreur dans votre email</p></div>';
+            $message = '<div class="callout callout-danger"><p>Erreur dans votre email</p></div>';
             return $message;
         } else {
             //verfie si email existe deja
@@ -698,7 +697,7 @@ function modifieprofadmin()
             $total = $statement->rowCount();
             if ($total) {
                 $valid = 0;
-                $message = '<div class="callout callout-danger"><p>l email existe deja</p></div>';
+                $message = '<div class="callout callout-danger"><p>l\'email existe déjà</p></div>';
                 return $message;
             }
         }
@@ -709,7 +708,7 @@ function modifieprofadmin()
         $_SESSION['user']['email'] = $_POST['email'];
         $statement = $pdo->prepare("UPDATE tbl_user SET nom_u=?, email=?, tel_u=? WHERE id=?");
         $statement->execute(array($_POST['nom'], $_POST['email'], $_POST['tel'], $_SESSION['user']['id']));
-        $message = '<div class="callout callout-success"><p>votre profile modifie avec succes</p></div>';
+        $message = '<div class="callout callout-success"><p>Votre profil a été modifié avec succès</p></div>';
         return $message;
     }
 }

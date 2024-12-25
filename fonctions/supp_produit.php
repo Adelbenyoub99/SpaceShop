@@ -1,5 +1,4 @@
 <?php require_once('../admin/header.php'); ?>
-
 <?php
 //si il na pas envoyer un id
 $pdo = pdo();
@@ -17,8 +16,6 @@ if (!isset($_REQUEST['id'])) {
 	}
 }
 ?>
-
-
 <?php
 $pdo = pdo();
 // supprimer la photo dans le dossier opload

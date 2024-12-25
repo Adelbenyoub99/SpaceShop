@@ -1,12 +1,9 @@
 <?php require_once('header.php'); ?>
-
 <?php
 include_once "fonctions/categorie.php";
 $i = 0;
 $result = affiche_categorie();
 ?>
-
-
 <div class="page-banner">
     <div class="inner">
         <h1>Produits</h1>
@@ -84,8 +81,8 @@ $result = affiche_categorie();
                                         <p class="card-text" style=" margin-left: 5px;"><b><?php echo $row['p_nom']; ?></b></p>
                                         <div class="d-flex justify-content-between align-items-center" style="margin-bottom: 20px">
                                             <h5 class="text-muted" style="color: red;"><del><?php echo $row['p_prixanc']; ?> DA</del></h5>
-                                            <h5 class="text-muted">prix : <?php echo $row['p_prix']; ?> DA</h5><br>
-                                            <a style="float: right; padding-bottom: 10px;color: orange;" href="produit.php?id=<?php echo $row['p_id']; ?>"><i class="fa fa-plus"></i> Plus</a>
+                                            <h5 class="text-muted">Prix : <?php echo $row['p_prix']; ?> DA</h5><br>
+                                            <a style="float: right; padding-bottom: 10px;color: orange;" href="produit.php?id=<?php echo $row['p_id']; ?>"><i class="fa fa-plus"></i>Plus</a>
                                         </div>
                                     </div>
                                 </div>

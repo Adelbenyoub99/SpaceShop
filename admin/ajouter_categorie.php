@@ -14,7 +14,7 @@ if(isset($_POST['ajouter'])) {
 		<h1>Ajouter une catégorie</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="categorie.php" class="btn btn-primary btn-sm">Afficher toutes les categories</a>
+		<a href="categorie.php" class="btn btn-primary btn-sm">Afficher toutes les catégories</a>
 	</div>
 </section>
 

@@ -13,7 +13,6 @@ function affiche_produit()
       ");
   $statement->execute(array(0));
   $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
   return $result;
 }
 
@@ -40,51 +39,42 @@ function ajouter_produit()
 
   if (empty($_POST['id_cat'])) {
     $valid = 0;
-    $message = '<div class="callout callout-danger"><p>Sélectionee une categorie</p></div>';
+    $message = '<div class="callout callout-danger"><p>Sélectionnez une catégorie</p></div>';
     return $message;
   }
-
   if (empty($_POST['nom_pro'])) {
     $valid = 0;
     $message = '<div class="callout callout-danger"><p>Nom du produit</p></div>';
     return $message;
   }
-
   if (empty($_POST['prix'])) {
     $valid = 0;
     $message = '<div class="callout callout-danger"><p>Prix du produit</p></div>';
     return $message;
   }
-
   if (empty($_POST['quant'])) {
     $valid = 0;
     $message = '<div class="callout callout-danger"><p>Quantité</p></div>';
     return $message;
   }
 
-
   // Vérfier la photo si vide et le format
   $lien = $_FILES['p_photo']['name'];
   $lien_t = $_FILES['p_photo']['tmp_name'];
-
   if ($lien != '') {
     $ext = pathinfo($lien, PATHINFO_EXTENSION);
     $file_name = basename($lien, '.' . $ext);
     if ($ext != 'jpg' && $ext != 'png' && $ext != 'jpeg' && $ext != 'gif') {
       $valid = 0;
-      $message = '<div class="callout callout-danger"><p>Veillez insérer un png, jpg, jpeg ou gif</p></div>';
+      $message = '<div class="callout callout-danger"><p>Veuillez insérer une image</p></div>';
       return $message;
     }
   } else {
     $valid = 0;
-    $message = '<div class="callout callout-danger"><p>Veuillez ajouter une image</p></div>';
+    $message = '<div class="callout callout-danger"><p>Veuillez insérer une image</p></div>';
     return $message;
   }
-
-
-
   if ($valid == 1) {
-
     $stmt = $pdo->prepare("SHOW TABLE STATUS LIKE 'table_produit'");
     $stmt->execute();
     $result = $stmt->fetchAll();
@@ -96,11 +86,9 @@ function ajouter_produit()
       $photo = array();
       $photo = $_FILES['photo']["name"];
       $photo = array_values(array_filter($photo));
-
       $photo_temp = array();
       $photo_temp = $_FILES['photo']["tmp_name"];
       $photo_temp = array_values(array_filter($photo_temp));
-
       $stmt = $pdo->prepare("SHOW TABLE STATUS LIKE 'tbl_p_photo'");
       $stmt->execute();
       $result = $stmt->fetchAll();
@@ -108,9 +96,7 @@ function ajouter_produit()
         $next_id1 = $row[10];
       }
       $z = $next_id1;
-
       $m = 0;
-
       // Insérer les photos secondaires dans la base de données
       for ($i = 0; $i < count($photo); $i++) {
         $my_ext1 = pathinfo($photo[$i], PATHINFO_EXTENSION);
@@ -129,7 +115,6 @@ function ajouter_produit()
         }
       }
     }
-
 
     // Ajouter la photo prencipale dans le dossier uploads
     $nomphoto = 'produit-' . $ai_id . '.' . $ext;
@@ -165,7 +150,7 @@ function ajouter_produit()
       $_POST['id_cat']
     ));
 
-    $message = '<div class="callout callout-success"><p>produit ajouter avec succes</p></div>';
+    $message = '<div class="callout callout-success"><p>Produit ajouté avec succès</p></div>';
     return $message;
   }
 }
@@ -195,11 +180,9 @@ function verifieid_produit()
 function affiche_leproduitpourmodifie()
 {
   $pdo = pdo();
-
   $statement = $pdo->prepare("SELECT * FROM table_produit WHERE p_id=?");
   $statement->execute(array($_REQUEST['idp']));
   $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
   return $result;
 }
 
@@ -218,10 +201,9 @@ function modifie_produit()
 {
   $pdo = pdo();
   $valid = 1;
-
   if (empty($_POST['cat'])) {
     $valid = 0;
-    $message = '<div class="callout callout-danger"><p>Sélectionez une categorie</p></div>';
+    $message = '<div class="callout callout-danger"><p>Sélectionnez une catégorie</p></div>';
     return $message;
   }
 
@@ -251,7 +233,7 @@ function modifie_produit()
     $file_name = basename($lien, '.' . $ext);
     if ($ext != 'jpg' && $ext != 'png' && $ext != 'jpeg' && $ext != 'gif') {
       $valid = 0;
-      $message = '<div class="callout callout-danger"><p>Veillez insérer un jpg, png, jpeg ou gif</p></div>';
+      $message = '<div class="callout callout-danger"><p>Veuillez insérer une image</p></div>';
       return $message;
     }
   }
@@ -259,7 +241,6 @@ function modifie_produit()
   if ($valid == 1) {
     $pdo = pdo();
     if (isset($_FILES['photo']["name"]) && isset($_FILES['photo']["tmp_name"])) {
-
       $photo = array();
       $photo = $_FILES['photo']["name"];
       $photo = array_values(array_filter($photo));
@@ -318,7 +299,6 @@ function modifie_produit()
         $_REQUEST['idp']
       ));
     } else {
-
       $pdo = pdo();
       unlink('../assets/uploads/' . $_POST['ancphot']);
       $nom_photo = 'produit-' . $_REQUEST['idp'] . '.' . $ext;
@@ -356,8 +336,6 @@ function modifie_produit()
 }
 
 
-
-
 //*******************************boutique*********************************************//
 // Fonction pour afficher les produits de la boutique
 function affiche_produitboutique()
@@ -371,7 +349,6 @@ function affiche_produitboutique()
       ");
   $statement->execute(array($_SESSION['botique']['id_c']));
   $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
   return $result;
 }
 
@@ -380,10 +357,9 @@ function ajouter_produitboutique()
 {
   $pdo = pdo();
   $valid = 1;
-
   if (empty($_POST['id_cat'])) {
     $valid = 0;
-    $message = '<div class="callout callout-danger"><p>Sélectionez une categorie</p></div>';
+    $message = '<div class="callout callout-danger"><p>Sélectionnez une catégorie</p></div>';
     return $message;
   }
 
@@ -414,12 +390,12 @@ function ajouter_produitboutique()
     $file_name = basename($lien, '.' . $ext);
     if ($ext != 'jpg' && $ext != 'png' && $ext != 'jpeg' && $ext != 'gif') {
       $valid = 0;
-      $message = '<div class="callout callout-danger"><p>Veuillez ajouter un jpg, png, jpeg ou gif</p></div>';
+      $message = '<div class="callout callout-danger"><p>Veuillez insérer une image</p></div>';
       return $message;
     }
   } else {
     $valid = 0;
-    $message = '<div class="callout callout-danger"><p>Ajoutez une image svp</p></div>';
+    $message = '<div class="callout callout-danger"><p>Veuillez insérer une image</p></div>';
     return $message;
   }
 
@@ -497,7 +473,7 @@ function ajouter_produitboutique()
       $_POST['id_cat']
     ));
 
-    $message = '<div class="callout callout-success"><p>Produit ajouter avec succs</p></div>';
+    $message = '<div class="callout callout-success"><p>Produit ajouté avec succès</p></div>';
     return $message;
   }
 }
@@ -510,19 +486,19 @@ function modifie_produitboutique()
 
   if (empty($_POST['cat'])) {
     $valid = 0;
-    $message = '<div class="callout callout-danger"><p>Sélectionee une categorie</p></div>';
+    $message = '<div class="callout callout-danger"><p>Sélectionnez une catégorie</p></div>';
     return $message;
   }
 
   if (empty($_POST['nom_pro'])) {
     $valid = 0;
-    $message = '<div class="callout callout-danger"><p>Nom de produit</p></div>';
+    $message = '<div class="callout callout-danger"><p>Nom du produit</p></div>';
     return $message;
   }
 
   if (empty($_POST['prix'])) {
     $valid = 0;
-    $message = '<div class="callout callout-danger"><p>Prix de produit</p></div>';
+    $message = '<div class="callout callout-danger"><p>Prix du produit</p></div>';
     return $message;
   }
 
@@ -540,7 +516,7 @@ function modifie_produitboutique()
     $file_name = basename($lien, '.' . $ext);
     if ($ext != 'jpg' && $ext != 'png' && $ext != 'jpeg' && $ext != 'gif') {
       $valid = 0;
-      $message = '<div class="callout callout-danger"><p>Veuillez insérer</p></div>';
+      $message = '<div class="callout callout-danger"><p>Veuillez insérer une image</p></div>';
       return $message;
     }
   }

@@ -4,14 +4,14 @@ require_once "fonctions/BDD.php";
 $pdo = pdo();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<!-- iconfav -->
 	<link rel="icon" type="image/png" href="assets/uploads/favicon.jpg">
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css"> <!-- boutstrap -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css"> 
 	<!-- icon -->
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/rating.css">
@@ -31,7 +31,6 @@ $pdo = pdo();
 	<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5993ef01e2587a001253a261&product=inline-share-buttons"></script>
 
 </head>
-
 <body>
 	<!-- top bar -->
 	<div class="top">
@@ -88,9 +87,9 @@ $pdo = pdo();
 				<div class="col-md-3 search-area">
 					<form class="navbar-form navbar-left" role="search" action="" method="get">
 						<div class="form-group">
-							<input type="text" class="form-control search-top" placeholder="Recherche " name="">
+							<input type="text" class="form-control search-top" placeholder="Recherche " name="search">
 						</div>
-						<button type="submit" class="btn btn-danger">Recherche</button>
+						<button type="submit" class="btn btn-danger">Rechercher</button>
 					</form>
 				</div>
 			</div>

@@ -13,20 +13,15 @@ if(!isset($_SESSION['user'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 	<meta charset="utf-8">
-
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
 	<title>Admin</title>
-
 	<!-- iconfav -->
 	<link rel="icon" type="image/png" href="../assets/uploads/favicon.jpg">
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
 	<!-- //////////////css//////////////// -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- lien vers le fichie fontawesom et ioneicon pour recupere les icon -->
@@ -35,19 +30,16 @@ if(!isset($_SESSION['user'])) {
 	<!-- cest text area mais personalise comme word -->
 	<link rel="stylesheet" href="css/datepicker3.css">
 	<link rel="stylesheet" href="css/summernote.css">
-
 	<!-- selcteur -->
 	<link rel="stylesheet" href="css/select2.min.css">
 	<!-- tableaux utiliser dans notre projet -->
 	<link rel="stylesheet" href="css/dataTables.bootstrap.css">
-	
 	<!-- tomplate utiliser pour cote admin -->
 	<link rel="stylesheet" href="css/AdminLTE.min.css">
 	<!-- notre feuille de syle css -->
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
-
 <body class="hold-transition fixed sidebar-mini">
 	<div class="wrapper">
 		<header class="main-header" style="background-color: black;">
@@ -63,11 +55,9 @@ if(!isset($_SESSION['user'])) {
 						<a href="profile.php" class="btn " style="margin-top: 7px;  color: white;">
 							<i class="fa fa-user"></i> Profil
 						</a>
-
 						<a href="../fonctions/deconnecteradmin.php" class="btn " style="margin-top: 7px;  color: white;">
-							<i class="fa fa-sign-in"></i> Déconnection
+							<i class="fa fa-sign-in"></i> Déconnecxion
 						</a>
-
 					</ul>
 				</div>
 			</nav>
@@ -80,32 +70,28 @@ if(!isset($_SESSION['user'])) {
 							<i class="fa fa-dashboard"></i> <span>Accueil</span>
 						</a>
 					</li>
-
 					<li class="treeview">
 						<a href="categorie.php">
 							<i class="fa fa-circle"></i> <span>Catégories</span> </a>
 						</a>
 					</li>
-
 					<li class="treeview">
 						<a href="sous-categorie.php">
-							<i class="fa fa-circle"></i> <span>Sous-catégorie</span> </a>
+							<i class="fa fa-circle"></i> <span>Sous-catégories</span> </a>
 					</li>
-
 					<li class="treeview">
 						<a href="produit.php">
 							<i class="fa fa-shopping-bag"></i> <span>Produits</span>
 						</a>
 					</li>
-
 					<li class="treeview">
 						<a href="client.php">
-							<i class="fa fa-user-plus"></i> <span>Liste des clients</span>
+							<i class="fa fa-user-plus"></i> <span>Clients</span>
 						</a>
 					</li>
 					<li class="treeview">
 						<a href="boutique.php">
-							<i class="fa fa-user-plus"></i> <span>Liste des boutiques </span>
+							<i class="fa fa-user-plus"></i> <span>Boutiques </span>
 						</a>
 					</li>
 					<li class="treeview">
@@ -115,7 +101,7 @@ if(!isset($_SESSION['user'])) {
 					</li>
 					<li class="treeview ">
 						<a href="vente.php">
-							<i class="fa fa-sticky-note"></i> <span>Les ventes</span>
+							<i class="fa fa-sticky-note"></i> <span>Ventes</span>
 						</a>
 					</ul>
 				</section>

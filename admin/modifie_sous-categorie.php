@@ -24,7 +24,6 @@ if(isset($_POST['modifie'])) {
 
 ?>
 
-
 <section class="content-header">
 	<div class="content-header-left">
 		<h1>Modifier sous-catégorie</h1>
@@ -33,7 +32,6 @@ if(isset($_POST['modifie'])) {
 		<a href="sous-categorie.php" class="btn btn-primary btn-sm">Afficher tout</a>
 	</div>
 </section>
-
 <section class="content">
   <div class="row">
     <div class="col-md-12">
@@ -46,11 +44,10 @@ if(isset($_POST['modifie'])) {
                 <div class="form-group">
                     <label for="" class="col-sm-3 control-label">Nom de la catégorie </label>
                     <div class="col-sm-4">
-                        <select name="id_categ" class="form-control select2" disabled>
+                        <select name="id_categ" class="form-control select2">
 
                             <option value="" >Choisir une catégorie</option>
                             <?php
-                            
                             foreach ($results as $row) {
                                 ?>
                                 <option value="<?php echo $row['id_categorie']; ?>" <?php if($row['id_categorie'] == $id_categ){echo 'selected';} ?>><?php echo $row['cat_nom']; ?></option>
@@ -60,34 +57,23 @@ if(isset($_POST['modifie'])) {
                         </select>
                     </div>
                 </div>
-
-
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Sous catégorie </label>
+                    <label for="" class="col-sm-3 control-label">Sous-catégorie </label>
                     <div class="col-sm-4">
                         <input type="text" class="form-control" name="sous_cat" value="<?php echo $sous_cat; ?>">
                     </div>
                 </div>
-
-
                 <div class="form-group">
                 	<label for="" class="col-sm-3 control-label"></label>
                     <div class="col-sm-6">
                       <button type="submit" class="btn btn-success pull-left" name="modifie">Modifier</button>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
         </form>
-
-
-
     </div>
   </div>
-
 </section>
 
 <?php require_once('footer.php'); ?>

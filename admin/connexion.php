@@ -11,7 +11,6 @@ if(isset($_POST['connexion'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +21,6 @@ if(isset($_POST['connexion'])) {
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/AdminLTE.min.css">
 </head>
-
 <body style="background-color: black;">
 	<div class="login-box" >
 		<div class="login-logo">
