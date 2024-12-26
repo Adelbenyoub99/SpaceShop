@@ -8,13 +8,16 @@ Lancez le serveur local
 - user : root
 - password : 
 
-Importer le fichier pfc_bdd.sql dans phpmyadmin
+Importer le fichier space_shop_bdd.sql dans phpmyadmin
 
 ## Utilisation de l'application : 
-
-admin :       email : admin@gmail.com / Mot de passe : admin
+### Espace client et boutique :
 boutique :    email : boutique@gmail.com / Mot de passe : boutique
 client :      email : client@gmail.com / Mot de passe : client
+
+### Espace admin : 
+Rendez-vous a cet URL : "http://127.0.0.1/SpaceShop/admin"
+email : admin@gmail.com / Mot de passe : admin
 
 ## Contributeurs : 
 
