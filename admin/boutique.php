@@ -25,6 +25,7 @@
 							<tr>
 								<th width="10">#</th>
 								<th width="180">Nom</th>
+								<th width="180">Prénom</th>
 								<th width="180">Nom de boutique</th>
 								<th width="150">Email</th>
 								<th width="150">Téléphone</th>
@@ -43,7 +44,8 @@
 								<tr>
 									<td><?php echo $i; ?></td>
 									<td><?php echo $affiche['nom_c'];  ?></td> 
-									<td><?php echo $affiche['prenom_c']; ?></td>
+									<td><?php echo $affiche['prenom_c'];  ?></td> 
+									<td><?php echo $affiche['nom_b']; ?></td>
 									<td><?php echo $affiche['email_c']; ?></td>
 									<td><?php echo $affiche['tel_c']; ?></td>
 									<td>

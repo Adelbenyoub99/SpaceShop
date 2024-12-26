@@ -6,7 +6,7 @@ function pdo()
 	$dbhost = 'localhost';
 
 	// nom de la base de donnees
-	$dbname = 'pfc_bdd';
+	$dbname = 'space_shop_bdd';
 
 	// nom utilisateur
 	$dbuser = 'root';

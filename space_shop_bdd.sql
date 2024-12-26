@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 18 déc. 2024 à 19:56
+-- Généré le : jeu. 26 déc. 2024 à 21:39
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `pfc_bdd`
+-- Base de données : `space_shop_bdd`
 --
 
 -- --------------------------------------------------------
@@ -40,10 +40,10 @@ CREATE TABLE IF NOT EXISTS `table_cat` (
 --
 
 INSERT INTO `table_cat` (`id_categorie`, `cat_nom`, `aff_ach`) VALUES
-(16, 'Technologie:', 1),
-(17, 'Automobile:', 1),
+(16, 'Technologie', 1),
+(17, 'Automobile', 1),
 (18, 'Sports et Loisirs ', 1),
-(21, 'Articles MÃ©nagÃ¨res', 1);
+(21, 'Articles Ménagers', 1);
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `table_client` (
   `num_cni_pc` int(20) NOT NULL,
   `num_reg` int(30) NOT NULL,
   PRIMARY KEY (`id_c`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `table_client`
@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `table_panier` (
   `quant` int(6) NOT NULL,
   `idboutique` int(5) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -382,7 +382,7 @@ CREATE TABLE IF NOT EXISTS `table_produit` (
   `id_souscat` int(11) NOT NULL,
   `cat_id` int(4) NOT NULL,
   PRIMARY KEY (`p_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -396,7 +396,7 @@ CREATE TABLE IF NOT EXISTS `table_souhaite` (
   `idper` int(11) NOT NULL,
   `idproduit` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `table_souhaite`
@@ -418,25 +418,25 @@ CREATE TABLE IF NOT EXISTS `table_souscat` (
   `nom_souscat` varchar(255) NOT NULL,
   `id_cat` int(11) NOT NULL,
   PRIMARY KEY (`id_souscat`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `table_souscat`
 --
 
 INSERT INTO `table_souscat` (`id_souscat`, `nom_souscat`, `id_cat`) VALUES
-(2, 'TÃ©lÃ©phonie ', 16),
-(3, 'MatÃ©riels Informatique', 16),
-(4, 'MatÃ©riel audio et vidÃ©o ', 16),
 (6, 'Accessoires Auto ', 17),
-(7, 'Auto Ã©lectronique', 17),
-(8, 'PiÃ¨ces dÃ©tachÃ©es ', 17),
 (9, 'Camping', 18),
 (10, 'Fitness', 18),
 (11, 'Chasse et Peche', 18),
-(12, 'Ã‰lectromÃ©nager ', 21),
 (13, 'Meuble', 21),
-(14, 'DÃ©coration intÃ©rieure', 21);
+(15, 'Électro ménagers ', 21),
+(16, 'Pièces détachées ', 17),
+(17, 'Auto Électronique', 17),
+(18, 'Matériel audio et vidéo', 16),
+(19, 'Matériel informatique', 16),
+(20, 'Téléphonie', 16),
+(21, 'Sport', 18);
 
 -- --------------------------------------------------------
 
@@ -457,7 +457,7 @@ CREATE TABLE IF NOT EXISTS `tbl_demmande` (
   PRIMARY KEY (`id`),
   KEY `nom_client` (`nom_client`),
   KEY `nom_client_2` (`nom_client`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -471,7 +471,7 @@ CREATE TABLE IF NOT EXISTS `tbl_p_photo` (
   `photo` varchar(255) NOT NULL,
   `p_id` int(11) NOT NULL,
   PRIMARY KEY (`pp_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tbl_p_photo`
@@ -495,7 +495,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `tel_u` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tbl_user`
@@ -519,7 +519,7 @@ CREATE TABLE IF NOT EXISTS `tbl_vente` (
   `quantite` int(3) NOT NULL,
   `id_produit` int(3) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

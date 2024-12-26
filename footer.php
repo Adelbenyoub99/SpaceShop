@@ -19,9 +19,6 @@
         </div>
     </div>
 </div>
-<a href="#" class="scrollup">
-    <i class="fa fa-angle-up"></i>
-</a>
 <script src="assets/js/jquery-2.2.4.min.js"></script>
 <script src="assets/js/summernote.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>

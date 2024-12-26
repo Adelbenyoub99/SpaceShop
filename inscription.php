@@ -64,7 +64,7 @@ if (isset($_POST['inscription'])) {
                                     <input type="password" class="form-control" name="cmotpasse">
                                 </div>
                                 <div class="form-group">
-                                    <p style="padding-left: 17px;"> Si vous n'avez de compte <a href="connexion.php"> Cliquez ici </a></p>
+                                    <p style="padding-left: 17px;"> Si vous avez un compte <a href="connexion.php"> Cliquez ici </a></p>
                                 </div>
                                 <div class="form-group" style="float: right;">
                                     <label for=""></label>

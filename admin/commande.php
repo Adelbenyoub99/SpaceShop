@@ -9,7 +9,7 @@ $result = affiche_commande();
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Les commandes</h1>
+		<h1>Liste des commandes</h1>
 	</div>
 </section>
 <section class="content">

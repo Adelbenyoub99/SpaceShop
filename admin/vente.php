@@ -15,7 +15,7 @@ if($success_message != '') {
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Les ventes</h1>
+		<h1>Liste des ventes</h1>
 	</div>
 </section>
 <section class="content">

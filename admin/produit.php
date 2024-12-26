@@ -8,7 +8,7 @@ include_once "../fonctions/produit.php";
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Les produits</h1>
+		<h1>Liste des produits</h1>
 	</div>
 	<div class="content-header-right">
 		<a href="ajouter_produit.php" class="btn btn-primary btn-sm">Ajouter</a>

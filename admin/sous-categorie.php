@@ -10,7 +10,7 @@ $result = affiche_souscat();
 
 <section class="content-header">
     <div class="content-header-left">
-        <h1>Sous-catégorie</h1>
+        <h1>Liste des sous-catégories</h1>
     </div>
     <div class="content-header-right">
         <a href="ajouter_sous-categorie.php" class="btn btn-primary btn-sm">Ajouter</a>

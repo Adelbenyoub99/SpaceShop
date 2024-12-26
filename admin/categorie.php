@@ -9,7 +9,7 @@ $rs=affiche_categorie();
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Catégorie</h1>
+		<h1>Liste des catégories</h1>
 	</div>
 	<div class="content-header-right">
 		<a href="ajouter_categorie.php" class="btn btn-primary btn-sm">Ajouter</a>

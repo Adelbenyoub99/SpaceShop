@@ -1,6 +1,27 @@
 		</div>
 
 		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-6 col-xs-12">
+						<div class="left">
+							<ul>
+								<!-- fontawsom -->
+								<li><a href=""><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-linkedin"></i></a></li>
+								<li><a href=""><i class="fa fa-instagram"></i></a></li>
+								<li><a href=""><i class="fa fa-telegram"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 copyright">
+						Copyright © 2022 - Developed LICENCE 3 SI
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<script src="../assets/js/jquery-2.2.4.min.js"></script>
 		<script src="../assets/js/bootstrap.min.js"></script>
@@ -102,9 +123,6 @@
 
 
 
-
-
-<!-- 
 
 
 		<script type="text/javascript">
@@ -264,7 +282,6 @@
 				}
 			};
 		</script>
-		Ceci est un commentaire -->
 
 		</body>
 
