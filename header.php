@@ -85,7 +85,7 @@ $pdo = pdo();
 					</ul>
 				</div>
 				<div class="col-md-3 search-area">
-					<form class="navbar-form navbar-left" role="search" action="" method="get">
+					<form class="navbar-form navbar-left" role="search" method="get">
 						<div class="form-group">
 							<input type="text" class="form-control search-top" placeholder="Recherche " name="search">
 						</div>

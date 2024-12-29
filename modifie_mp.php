@@ -37,7 +37,7 @@ if (isset($_POST['modifie'])) {
                     <h3 class="text-center">
                         Modifier le mot de passe
                     </h3>
-                    <form action="" method="post">
+                    <form method="post">
                         <div class="row">
                             <div class="col-md-4"></div>
                             <div class="col-md-4">
@@ -50,12 +50,12 @@ if (isset($_POST['modifie'])) {
                                 }
                                 ?>
                                 <div class="form-group">
-                                    <label for="">Mot de passe :</label>
-                                    <input type="password" class="form-control" name="pass_c">
+                                    <label for="pass_c">Mot de passe :</label>
+                                    <input type="password" class="form-control" id="pass_c" name="pass_c">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Confirmez le mot de passe :</label>
-                                    <input type="password" class="form-control" name="conpass">
+                                    <label for="conpass">Confirmez le mot de passe :</label>
+                                    <input type="password" class="form-control" id="conpass" name="conpass">
                                 </div>
                                 <input type="submit" class="btn btn-primary" value="modifie" name="modifie">
                             </div>

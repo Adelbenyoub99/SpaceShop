@@ -64,18 +64,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <form action="" method="post">
+                    <form method="post">
                         <div class="cart">
                             <?php echo $message; ?>
                             <table class="table table-responsive table-hover table-bordered">
                                 <tr>
-                                    <th><?php echo '#' ?></th>
+                                    <th width="10"><?php echo '#' ?></th>
                                     <th width="100">Photos</th>
                                     <th width="160">Nom du produit</th>
                                     <th width="160">Prix</th>
                                     <th width="100">Quantité</th>
                                     <th width="100">Total</th>
-                                    <th>Plus</th>
+                                    <th width="160">Plus</th>
                                 </tr>
                                 <?php
                                 $i = 0;
@@ -116,14 +116,13 @@
                                 }
                                     ?>
                                     <tr>
-                                        <th width="100"></th>
-                                        <th></th>
+                                        <th width="10"></th>
                                         <th width="100"></th>
                                         <th width="160"></th>
-                                        <th>Total</th>
-                                        <th width="100">
-                                        </th>
-                                        <th width="160"><input type="submit" class="btn btn-primary" value="acheter" name="pai"></th>
+                                        <th width="160"></th>
+                                        <th width="100">Total</th>
+                                        <th width="100"></th>
+                                        <th width="160"><input type="submit" class="btn btn-primary" value="Acheter" name="pai"></th>
                                     </tr>
                             </table>
                         </div>
@@ -146,11 +145,11 @@
                         <div class="cart">
                             <table class="table table-responsive table-hover table-bordered">
                                 <tr>
-                                    <th><?php echo '#' ?></th>
+                                    <th width="10"><?php echo '#' ?></th>
                                     <th width="100">Photos</th>
                                     <th width="160">Nom du produit</th>
                                     <th width="160">Prix</th>
-                                    <th>Plus</th>
+                                    <th width="160">Plus</th>
                                 </tr>
                                 <?php
                                 $i = 0;

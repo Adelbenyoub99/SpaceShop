@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-        <div class="item" style="background-image: url('assets/uploads/slider02.jpg');">
+        <div class="item" style="background-image:url('assets/uploads/slider02.jpg');">
             <div class="bs-slider-overlay"></div>
             <div class="container">
                 <div class="row">

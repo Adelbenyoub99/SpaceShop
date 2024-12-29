@@ -38,19 +38,19 @@ if (isset($_POST['connexion'])) {
                             <div class="col-md-4">
                                 <?php echo $message; ?>
                                 <div class="form-group">
-                                    <label for="">Email :</label>
-                                    <input type="email" class="form-control" name="email">
+                                    <label for="email">Email :</label>
+                                    <input type="email" class="form-control" id="email" name="email" autocomplete="email">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Mot de passe :</label>
-                                    <input type="password" class="form-control" name="motpass">
+                                    <label for="motpass">Mot de passe :</label>
+                                    <input type="password" class="form-control" id="motpass" name="motpass">
                                 </div>
                                 <div class="form-group">
                                     <p> Si vous voulez créer votre boutique en ligne <a href="creeboutique.php"> Cliquez ici </a></p>
                                 </div>
                                 <div class="form-group" style="float: right;">
-                                    <label for=""></label>
-                                    <input type="submit" class="btn btn-success" value="connexion" name="connexion">
+                                    <label for="connexion"></label>
+                                    <input type="submit" class="btn btn-success" value="connexion" id="connexion" name="connexion">
                                 </div>
                             </div>
                         </div>

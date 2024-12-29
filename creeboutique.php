@@ -21,34 +21,34 @@ if (isset($_POST['inscription'])) {
         <div class="row">
             <div class="col-md-12">
                 <div class="user-content">
-                    <form action="" method="post">
+                    <form method="post">
                         <div class="row">
                             <div class="col-md-4"></div>
                             <div class="col-md-4">
                                 <?php echo $message; ?>
                                 <div class=" form-group">
-                                    <label for="">Nom de la boutique :</label>
-                                    <input type="text" class="form-control" name="nom_b" value="<?php if (isset($_POST['nom_b'])) {
+                                    <label for="nom_b">Nom de la boutique :</label>
+                                    <input type="text" class="form-control" id="nom_b" name="nom_b" value="<?php if (isset($_POST['nom_b'])) {
                                                                                                     echo $_POST['nom_b'];
                                                                                                 } ?>">
                                 </div>
                                 <div class=" form-group">
-                                    <label for="">Email :</label>
-                                    <input type="email" class="form-control" name="email" value="<?php if (isset($_POST['email'])) {
+                                    <label for="email">Email :</label>
+                                    <input type="email" class="form-control" id="email" name="email" autocomplete="email" value="<?php if (isset($_POST['email'])) {
                                                                                                         echo $_POST['email'];
                                                                                                     } ?>">
                                 </div>
                                 <div class=" form-group">
-                                    <label for="">CNI OU PC :</label>
-                                    <input type="text" class="form-control" name="CNI">
+                                    <label for="CNI">CNI OU PC :</label>
+                                    <input type="text" class="form-control" id="CNI" name="CNI">
                                 </div>
                                 <div class=" form-group">
-                                    <label for="">Numéro de registe :</label>
-                                    <input type="text" class="form-control" name="NUMREG">
+                                    <label for="NUMREG">Numéro de registe :</label>
+                                    <input type="text" class="form-control" id="NUMREG" name="NUMREG">
                                 </div>
                                 <div class=" form-group">
-                                    <label for="">Pays :</label>
-                                    <select name="pays" class="form-control select2">
+                                    <label for="pays">Pays :</label>
+                                    <select id="pays" name="pays" class="form-control select2">
                                         <option value="">Séléctionnez</option>
                                         <?php
                                         foreach ($result as $row) {
@@ -60,19 +60,19 @@ if (isset($_POST['inscription'])) {
                                     </select>
                                 </div>
                                 <div class=" form-group">
-                                    <label for="">Mot de passe :</label>
-                                    <input type="password" class="form-control" name="motpasse">
+                                    <label for="motpasse">Mot de passe :</label>
+                                    <input type="password" class="form-control" id="motpasse" name="motpasse">
                                 </div>
                                 <div class=" form-group">
-                                    <label for="">Confirmez le mot de passe :</label>
-                                    <input type="password" class="form-control" name="cmotpasse">
+                                    <label for="cmotpasse">Confirmez le mot de passe :</label>
+                                    <input type="password" class="form-control" id="cmotpasse" name="cmotpasse">
                                 </div>
                                 <div class="form-group">
                                     <p style="padding-left: 17px;"> Si vous avez un compte <a href="pageboutique.php"> Cliquez ici </a></p>
                                 </div>
                                 <div class="form-group" style="float: right;">
-                                    <label for=""></label>
-                                    <input type="submit" class="btn btn-success" value="inscription" name="inscription">
+                                    <label for="inscription"></label>
+                                    <input type="submit" class="btn btn-success" value="inscription" id="inscription" name="inscription">
                                 </div>
                             </div>
                         </div>
